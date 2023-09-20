@@ -1,26 +1,13 @@
-
-           
-		   
 <!DOCTYPE html>
 <html>
 <head>
   <title>Hello</title>
   <script>
-    const response = await fetch("https://cors.szurek.local/10/", {    
-        credentials: "include",
-        method: "GET",
-        headers: {
-            'Accept-Language': 'pl-pl',
-        },
+    $.getJSON("https://cors.szurek.local/10/", function(json) {
+        alert(`Sekret to ${json['sekret']}.`);
     });
-    let json = await response.json();
-
-    if ("error" in json) {
-        alert(`Błąd: ${json['error']}`);
-    } else {
-        alert(`\nSekret to ${json['sekret']}.`);
-    }
-  </script>
+             
+  </scri
 </head>
 <body>
   <!-- Witam -->
