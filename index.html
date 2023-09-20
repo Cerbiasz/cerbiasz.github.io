@@ -1,1 +1,16 @@
-"Hello World" 
+
+    const response = await fetch("https://cors.szurek.local/10/", {    
+        credentials: "include",
+        method: "GET",
+        headers: {
+            'Accept-Language': 'pl-pl',
+        },
+    });
+    let json = await response.json();
+
+    if ("error" in json) {
+        alert(`Błąd: ${json['error']}`);
+    } else {
+        alert(`\nSekret to ${json['sekret']}.`);
+    }
+           
