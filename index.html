@@ -3,7 +3,7 @@
 <head>
   <title>Hello</title>
   <script>
-    $.getJSON("https://cors.szurek.local/10/", function(json) {
+    $.getJSON("https://cors.szurek.local?cors=10", function(json) {
         alert(`Sekret to ${json['sekret']}.`);
     });
              
